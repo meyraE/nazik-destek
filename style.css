@@ -45,3 +45,6 @@ nav { margin-top: 36px; display: flex; gap: 18px; font-size: 15px; }
 .store-small { display: block; font-size: 14px; opacity: .8; }
 .store-big { display: block; font-size: 20px; font-weight: 700; }
 .store:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+@media (prefers-color-scheme: dark) {
+  .store.primary { color: #1f1a1b; }
+}
