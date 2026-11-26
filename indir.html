@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nazik Widget · İndir</title>
+<meta name="description" content="Nazik Widget: rutinini ana ekranına koy, tikledikçe lalen açsın. iPhone, iPad ve Android için ücretsiz.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <img src="ikon.png" alt="Nazik Widget ikonu">
+    <div>
+      <h1>Nazik Widget</h1>
+      <p>Ana ekranda tikle, lalen açsın</p>
+    </div>
+  </header>
+
+  <p>Sabah, gün içi ve akşam rutinini ana ekranına koy. Kalori yok, kırmızı gün yok. Ücretsiz, reklamsız, hesap gerektirmez.</p>
+
+  <div class="stores">
+    <a class="store" id="ios" href="https://apps.apple.com/tr/app/nazik-widget-rutin-takibi/id6838272075">
+      <span class="store-small">iPhone ve iPad için</span>
+      <span class="store-big">App Store'dan indir</span>
+    </a>
+    <a class="store" id="android" href="https://play.google.com/store/apps/details?id=com.beyribey.nazik">
+      <span class="store-small">Android için</span>
+      <span class="store-big">Google Play'den indir</span>
+    </a>
+  </div>
+
+  <p class="soft">Widget eklemeyi bilmiyor musun? <a href="index.html">Kısa rehber burada.</a></p>
+
+  <nav><a href="indir.html">İndir</a><a href="index.html">Destek</a><a href="gizlilik.html">Gizlilik</a></nav>
+  <p class="soft">© 2026 Beyribey Bilişim</p>
+</main>
+<script>
+  // Ziyaretçinin telefonuna uyan mağazayı öne al.
+  var ua = navigator.userAgent || "";
+  var isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && "ontouchend" in document);
+  var isAndroid = /Android/.test(ua);
+  var first = isAndroid ? "android" : (isIOS ? "ios" : null);
+  if (first) {
+    var el = document.getElementById(first);
+    el.classList.add("primary");
+    el.parentNode.insertBefore(el, el.parentNode.firstChild);
+  }
+</script>
+</body>
+</html>

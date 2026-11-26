@@ -34,3 +34,14 @@ p, li { color: var(--text); }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 4px 20px 16px; margin-top: 18px; }
 a { color: var(--accent); }
 nav { margin-top: 36px; display: flex; gap: 18px; font-size: 15px; }
+.stores { display: grid; gap: 14px; margin: 26px 0 22px; }
+.store {
+  display: block; text-decoration: none;
+  background: var(--card); color: var(--text);
+  border: 1.5px solid var(--line); border-radius: 18px;
+  padding: 16px 22px;
+}
+.store.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.store-small { display: block; font-size: 14px; opacity: .8; }
+.store-big { display: block; font-size: 20px; font-weight: 700; }
+.store:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
